@@ -1,0 +1,3 @@
+name: CustomYaml
+version: 1.0-REFERENCE
+main: io.github.makotomiyamoto.CustomYaml.Main
