@@ -43,7 +43,7 @@ public class Main extends JavaPlugin {
 
         } catch (IOException e) {
 
-            System.out.println("Could now save ReferencedFile.yml, sorry...");
+            System.out.println("Could not save ReferencedFile.yml, sorry...");
 
         }
 
