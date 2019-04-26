@@ -5,6 +5,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.IOException;
 
 public class Main extends JavaPlugin {
 
@@ -27,6 +28,24 @@ public class Main extends JavaPlugin {
 
         System.out.println(referencedString);
         // prints "If you got this message, good job!" to console.
+
+        fileConfiguration.set("referenced-string", "hello! this changed! don't worry, the default stayed the same... i think...");
+        // changed referenced-string to the latter.
+
+        System.out.println(fileConfiguration.getString("referenced-string"));
+
+        try {
+
+            fileConfiguration.save(file);
+            // saves the edited ReferencedFile.yml
+
+            System.out.println("ReferencedFile.yml saved!");
+
+        } catch (IOException e) {
+
+            System.out.println("Could now save ReferencedFile.yml, sorry...");
+
+        }
 
     }
 
